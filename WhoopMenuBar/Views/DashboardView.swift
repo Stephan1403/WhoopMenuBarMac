@@ -13,6 +13,8 @@ struct DashboardView: View {
     @StateObject private var viewModel: DashboardViewModel
     @State private var networkMonitor = NetworkMonitor()
     
+    // TODO: set global error
+    
     @State private var showingInfo: Bool = false
     @State private var showingError: Bool = false
 
