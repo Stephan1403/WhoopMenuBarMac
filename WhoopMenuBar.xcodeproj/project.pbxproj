@@ -1,0 +1,770 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D426BB782CF4ECAE0038AEED /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D426BB772CF4ECAE0038AEED /* TopBar.swift */; };
+		D426BB7A2CF500970038AEED /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D426BB792CF500970038AEED /* NetworkUtils.swift */; };
+		D48B2D862CA449EE0053733E /* RecoverySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48B2D852CA449EE0053733E /* RecoverySectionView.swift */; };
+		D4ACD0592C85FACC00E522FB /* WhoopMenuBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD0582C85FACC00E522FB /* WhoopMenuBarApp.swift */; };
+		D4ACD05D2C85FACF00E522FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4ACD05C2C85FACF00E522FB /* Assets.xcassets */; };
+		D4ACD0602C85FACF00E522FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4ACD05F2C85FACF00E522FB /* Preview Assets.xcassets */; };
+		D4ACD06B2C85FACF00E522FB /* WhoopMenuBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD06A2C85FACF00E522FB /* WhoopMenuBarTests.swift */; };
+		D4ACD0752C85FACF00E522FB /* WhoopMenuBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD0742C85FACF00E522FB /* WhoopMenuBarUITests.swift */; };
+		D4ACD0772C85FACF00E522FB /* WhoopMenuBarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD0762C85FACF00E522FB /* WhoopMenuBarUITestsLaunchTests.swift */; };
+		D4ACD0882C871B6100E522FB /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD0872C871B6100E522FB /* AuthViewModel.swift */; };
+		D4ACD08A2C875F0100E522FB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD0892C875F0100E522FB /* LoginView.swift */; };
+		D4ACD08C2C875F1100E522FB /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD08B2C875F1100E522FB /* DashboardView.swift */; };
+		D4ACD08E2C8763A600E522FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD08D2C8763A600E522FB /* ContentView.swift */; };
+		D4ACD0912C87753E00E522FB /* SleepSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD0902C87753E00E522FB /* SleepSectionView.swift */; };
+		D4ACD0932C87786300E522FB /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD0922C87786300E522FB /* AuthToken.swift */; };
+		D4ACD0972C87791900E522FB /* SleepData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD0962C87791900E522FB /* SleepData.swift */; };
+		D4ACD0992C877F6F00E522FB /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD0982C877F6F00E522FB /* DashboardViewModel.swift */; };
+		D4ACD09B2C87808800E522FB /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD09A2C87808800E522FB /* AuthService.swift */; };
+		D4ACD09D2C8780D100E522FB /* WhoopApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD09C2C8780D100E522FB /* WhoopApi.swift */; };
+		D4ACD0A12C8B622700E522FB /* UrlUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD0A02C8B622700E522FB /* UrlUtils.swift */; };
+		D4AE58572CB8243E00334BAC /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AE58562CB8243E00334BAC /* AuthenticationError.swift */; };
+		D4C0C90C2CA9A057003710E5 /* SleepBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0C90B2CA9A057003710E5 /* SleepBarView.swift */; };
+		D4C0C9102CAEEF02003710E5 /* SleepDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0C90F2CAEEF02003710E5 /* SleepDataView.swift */; };
+		D4C0C9132CAF35FA003710E5 /* DataElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0C9122CAF35FA003710E5 /* DataElement.swift */; };
+		D4C0C9172CAF3F27003710E5 /* RecoveryChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0C9162CAF3F27003710E5 /* RecoveryChart.swift */; };
+		D4DDDF6F2CAFF7C700C33D84 /* SleepStagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DDDF6E2CAFF7C700C33D84 /* SleepStagesView.swift */; };
+		D4F11C7F2C8DF96500933185 /* KeychainUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F11C7E2C8DF96500933185 /* KeychainUtils.swift */; };
+		D4F11C812C8E2D8C00933185 /* RecoveryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F11C802C8E2D8C00933185 /* RecoveryData.swift */; };
+		D4F11C832C8F5D0700933185 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F11C822C8F5D0700933185 /* TokenManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4ACD0672C85FACF00E522FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4ACD04D2C85FACC00E522FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4ACD0542C85FACC00E522FB;
+			remoteInfo = WhoopMenuBar;
+		};
+		D4ACD0712C85FACF00E522FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4ACD04D2C85FACC00E522FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4ACD0542C85FACC00E522FB;
+			remoteInfo = WhoopMenuBar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D426BB772CF4ECAE0038AEED /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
+		D426BB792CF500970038AEED /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
+		D475CFA52CB83CB800D3503F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		D48B2D852CA449EE0053733E /* RecoverySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverySectionView.swift; sourceTree = "<group>"; };
+		D4ACD0552C85FACC00E522FB /* WhoopMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoopMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4ACD0582C85FACC00E522FB /* WhoopMenuBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoopMenuBarApp.swift; sourceTree = "<group>"; };
+		D4ACD05C2C85FACF00E522FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4ACD05F2C85FACF00E522FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D4ACD0612C85FACF00E522FB /* WhoopMenuBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhoopMenuBar.entitlements; sourceTree = "<group>"; };
+		D4ACD0662C85FACF00E522FB /* WhoopMenuBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhoopMenuBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4ACD06A2C85FACF00E522FB /* WhoopMenuBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoopMenuBarTests.swift; sourceTree = "<group>"; };
+		D4ACD0702C85FACF00E522FB /* WhoopMenuBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhoopMenuBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4ACD0742C85FACF00E522FB /* WhoopMenuBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoopMenuBarUITests.swift; sourceTree = "<group>"; };
+		D4ACD0762C85FACF00E522FB /* WhoopMenuBarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoopMenuBarUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D4ACD0872C871B6100E522FB /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		D4ACD0892C875F0100E522FB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D4ACD08B2C875F1100E522FB /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		D4ACD08D2C8763A600E522FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D4ACD0902C87753E00E522FB /* SleepSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepSectionView.swift; sourceTree = "<group>"; };
+		D4ACD0922C87786300E522FB /* AuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthToken.swift; sourceTree = "<group>"; };
+		D4ACD0962C87791900E522FB /* SleepData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepData.swift; sourceTree = "<group>"; };
+		D4ACD0982C877F6F00E522FB /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		D4ACD09A2C87808800E522FB /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		D4ACD09C2C8780D100E522FB /* WhoopApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoopApi.swift; sourceTree = "<group>"; };
+		D4ACD09E2C88FB9300E522FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D4ACD0A02C8B622700E522FB /* UrlUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlUtils.swift; sourceTree = "<group>"; };
+		D4AE58562CB8243E00334BAC /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
+		D4C0C90B2CA9A057003710E5 /* SleepBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepBarView.swift; sourceTree = "<group>"; };
+		D4C0C90F2CAEEF02003710E5 /* SleepDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepDataView.swift; sourceTree = "<group>"; };
+		D4C0C9122CAF35FA003710E5 /* DataElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataElement.swift; sourceTree = "<group>"; };
+		D4C0C9162CAF3F27003710E5 /* RecoveryChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryChart.swift; sourceTree = "<group>"; };
+		D4DDDF6E2CAFF7C700C33D84 /* SleepStagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepStagesView.swift; sourceTree = "<group>"; };
+		D4F11C7E2C8DF96500933185 /* KeychainUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainUtils.swift; sourceTree = "<group>"; };
+		D4F11C802C8E2D8C00933185 /* RecoveryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryData.swift; sourceTree = "<group>"; };
+		D4F11C822C8F5D0700933185 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4ACD0522C85FACC00E522FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4ACD0632C85FACF00E522FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4ACD06D2C85FACF00E522FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4ACD04C2C85FACC00E522FB = {
+			isa = PBXGroup;
+			children = (
+				D475CFA52CB83CB800D3503F /* Config.xcconfig */,
+				D4ACD0572C85FACC00E522FB /* WhoopMenuBar */,
+				D4ACD0692C85FACF00E522FB /* WhoopMenuBarTests */,
+				D4ACD0732C85FACF00E522FB /* WhoopMenuBarUITests */,
+				D4ACD0562C85FACC00E522FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4ACD0562C85FACC00E522FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4ACD0552C85FACC00E522FB /* WhoopMenuBar.app */,
+				D4ACD0662C85FACF00E522FB /* WhoopMenuBarTests.xctest */,
+				D4ACD0702C85FACF00E522FB /* WhoopMenuBarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4ACD0572C85FACC00E522FB /* WhoopMenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				D4AE58552CB8242600334BAC /* Errors */,
+				D4ACD09E2C88FB9300E522FB /* Info.plist */,
+				D4ACD0582C85FACC00E522FB /* WhoopMenuBarApp.swift */,
+				D4ACD08D2C8763A600E522FB /* ContentView.swift */,
+				D4ACD09F2C8B614500E522FB /* Utils */,
+				D4ACD0832C8719B800E522FB /* Views */,
+				D4ACD0842C8719C300E522FB /* Models */,
+				D4ACD0852C8719CE00E522FB /* Services */,
+				D4ACD0862C8719D600E522FB /* ViewModels */,
+				D4ACD05C2C85FACF00E522FB /* Assets.xcassets */,
+				D4ACD0612C85FACF00E522FB /* WhoopMenuBar.entitlements */,
+				D4ACD05E2C85FACF00E522FB /* Preview Content */,
+			);
+			path = WhoopMenuBar;
+			sourceTree = "<group>";
+		};
+		D4ACD05E2C85FACF00E522FB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D4ACD05F2C85FACF00E522FB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D4ACD0692C85FACF00E522FB /* WhoopMenuBarTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4ACD06A2C85FACF00E522FB /* WhoopMenuBarTests.swift */,
+			);
+			path = WhoopMenuBarTests;
+			sourceTree = "<group>";
+		};
+		D4ACD0732C85FACF00E522FB /* WhoopMenuBarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D4ACD0742C85FACF00E522FB /* WhoopMenuBarUITests.swift */,
+				D4ACD0762C85FACF00E522FB /* WhoopMenuBarUITestsLaunchTests.swift */,
+			);
+			path = WhoopMenuBarUITests;
+			sourceTree = "<group>";
+		};
+		D4ACD0832C8719B800E522FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D4ACD0892C875F0100E522FB /* LoginView.swift */,
+				D4ACD08B2C875F1100E522FB /* DashboardView.swift */,
+				D4ACD08F2C87751200E522FB /* Dashboard */,
+				D4C0C9142CAF3EC9003710E5 /* SleepViews */,
+				D4C0C9152CAF3ECE003710E5 /* RecoveryViews */,
+				D4C0C9112CAF35DD003710E5 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D4ACD0842C8719C300E522FB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D4ACD0922C87786300E522FB /* AuthToken.swift */,
+				D4ACD0962C87791900E522FB /* SleepData.swift */,
+				D4F11C802C8E2D8C00933185 /* RecoveryData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D4ACD0852C8719CE00E522FB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D4ACD09A2C87808800E522FB /* AuthService.swift */,
+				D4ACD09C2C8780D100E522FB /* WhoopApi.swift */,
+				D4F11C822C8F5D0700933185 /* TokenManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D4ACD0862C8719D600E522FB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D4ACD0872C871B6100E522FB /* AuthViewModel.swift */,
+				D4ACD0982C877F6F00E522FB /* DashboardViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D4ACD08F2C87751200E522FB /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				D48B2D852CA449EE0053733E /* RecoverySectionView.swift */,
+				D4ACD0902C87753E00E522FB /* SleepSectionView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		D4ACD09F2C8B614500E522FB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D4ACD0A02C8B622700E522FB /* UrlUtils.swift */,
+				D4F11C7E2C8DF96500933185 /* KeychainUtils.swift */,
+				D426BB792CF500970038AEED /* NetworkUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D4AE58552CB8242600334BAC /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				D4AE58562CB8243E00334BAC /* AuthenticationError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		D4C0C9112CAF35DD003710E5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D4C0C9122CAF35FA003710E5 /* DataElement.swift */,
+				D426BB772CF4ECAE0038AEED /* TopBar.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D4C0C9142CAF3EC9003710E5 /* SleepViews */ = {
+			isa = PBXGroup;
+			children = (
+				D4C0C90B2CA9A057003710E5 /* SleepBarView.swift */,
+				D4C0C90F2CAEEF02003710E5 /* SleepDataView.swift */,
+				D4DDDF6E2CAFF7C700C33D84 /* SleepStagesView.swift */,
+			);
+			path = SleepViews;
+			sourceTree = "<group>";
+		};
+		D4C0C9152CAF3ECE003710E5 /* RecoveryViews */ = {
+			isa = PBXGroup;
+			children = (
+				D4C0C9162CAF3F27003710E5 /* RecoveryChart.swift */,
+			);
+			path = RecoveryViews;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4ACD0542C85FACC00E522FB /* WhoopMenuBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4ACD07A2C85FACF00E522FB /* Build configuration list for PBXNativeTarget "WhoopMenuBar" */;
+			buildPhases = (
+				D4ACD0512C85FACC00E522FB /* Sources */,
+				D4ACD0522C85FACC00E522FB /* Frameworks */,
+				D4ACD0532C85FACC00E522FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WhoopMenuBar;
+			productName = WhoopMenuBar;
+			productReference = D4ACD0552C85FACC00E522FB /* WhoopMenuBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D4ACD0652C85FACF00E522FB /* WhoopMenuBarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4ACD07D2C85FACF00E522FB /* Build configuration list for PBXNativeTarget "WhoopMenuBarTests" */;
+			buildPhases = (
+				D4ACD0622C85FACF00E522FB /* Sources */,
+				D4ACD0632C85FACF00E522FB /* Frameworks */,
+				D4ACD0642C85FACF00E522FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4ACD0682C85FACF00E522FB /* PBXTargetDependency */,
+			);
+			name = WhoopMenuBarTests;
+			productName = WhoopMenuBarTests;
+			productReference = D4ACD0662C85FACF00E522FB /* WhoopMenuBarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D4ACD06F2C85FACF00E522FB /* WhoopMenuBarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4ACD0802C85FACF00E522FB /* Build configuration list for PBXNativeTarget "WhoopMenuBarUITests" */;
+			buildPhases = (
+				D4ACD06C2C85FACF00E522FB /* Sources */,
+				D4ACD06D2C85FACF00E522FB /* Frameworks */,
+				D4ACD06E2C85FACF00E522FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4ACD0722C85FACF00E522FB /* PBXTargetDependency */,
+			);
+			name = WhoopMenuBarUITests;
+			productName = WhoopMenuBarUITests;
+			productReference = D4ACD0702C85FACF00E522FB /* WhoopMenuBarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4ACD04D2C85FACC00E522FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					D4ACD0542C85FACC00E522FB = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					D4ACD0652C85FACF00E522FB = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = D4ACD0542C85FACC00E522FB;
+					};
+					D4ACD06F2C85FACF00E522FB = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = D4ACD0542C85FACC00E522FB;
+					};
+				};
+			};
+			buildConfigurationList = D4ACD0502C85FACC00E522FB /* Build configuration list for PBXProject "WhoopMenuBar" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4ACD04C2C85FACC00E522FB;
+			productRefGroup = D4ACD0562C85FACC00E522FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4ACD0542C85FACC00E522FB /* WhoopMenuBar */,
+				D4ACD0652C85FACF00E522FB /* WhoopMenuBarTests */,
+				D4ACD06F2C85FACF00E522FB /* WhoopMenuBarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4ACD0532C85FACC00E522FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4ACD0602C85FACF00E522FB /* Preview Assets.xcassets in Resources */,
+				D4ACD05D2C85FACF00E522FB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4ACD0642C85FACF00E522FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4ACD06E2C85FACF00E522FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4ACD0512C85FACC00E522FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4ACD0592C85FACC00E522FB /* WhoopMenuBarApp.swift in Sources */,
+				D4C0C9132CAF35FA003710E5 /* DataElement.swift in Sources */,
+				D4F11C812C8E2D8C00933185 /* RecoveryData.swift in Sources */,
+				D4ACD0992C877F6F00E522FB /* DashboardViewModel.swift in Sources */,
+				D4ACD0972C87791900E522FB /* SleepData.swift in Sources */,
+				D4F11C7F2C8DF96500933185 /* KeychainUtils.swift in Sources */,
+				D4ACD09D2C8780D100E522FB /* WhoopApi.swift in Sources */,
+				D4ACD08E2C8763A600E522FB /* ContentView.swift in Sources */,
+				D4C0C9172CAF3F27003710E5 /* RecoveryChart.swift in Sources */,
+				D4C0C9102CAEEF02003710E5 /* SleepDataView.swift in Sources */,
+				D4ACD09B2C87808800E522FB /* AuthService.swift in Sources */,
+				D4F11C832C8F5D0700933185 /* TokenManager.swift in Sources */,
+				D4DDDF6F2CAFF7C700C33D84 /* SleepStagesView.swift in Sources */,
+				D4ACD0A12C8B622700E522FB /* UrlUtils.swift in Sources */,
+				D4C0C90C2CA9A057003710E5 /* SleepBarView.swift in Sources */,
+				D4ACD08C2C875F1100E522FB /* DashboardView.swift in Sources */,
+				D426BB7A2CF500970038AEED /* NetworkUtils.swift in Sources */,
+				D4ACD08A2C875F0100E522FB /* LoginView.swift in Sources */,
+				D4ACD0932C87786300E522FB /* AuthToken.swift in Sources */,
+				D426BB782CF4ECAE0038AEED /* TopBar.swift in Sources */,
+				D4ACD0912C87753E00E522FB /* SleepSectionView.swift in Sources */,
+				D4ACD0882C871B6100E522FB /* AuthViewModel.swift in Sources */,
+				D4AE58572CB8243E00334BAC /* AuthenticationError.swift in Sources */,
+				D48B2D862CA449EE0053733E /* RecoverySectionView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4ACD0622C85FACF00E522FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4ACD06B2C85FACF00E522FB /* WhoopMenuBarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4ACD06C2C85FACF00E522FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4ACD0752C85FACF00E522FB /* WhoopMenuBarUITests.swift in Sources */,
+				D4ACD0772C85FACF00E522FB /* WhoopMenuBarUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4ACD0682C85FACF00E522FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4ACD0542C85FACC00E522FB /* WhoopMenuBar */;
+			targetProxy = D4ACD0672C85FACF00E522FB /* PBXContainerItemProxy */;
+		};
+		D4ACD0722C85FACF00E522FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4ACD0542C85FACC00E522FB /* WhoopMenuBar */;
+			targetProxy = D4ACD0712C85FACF00E522FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D4ACD0782C85FACF00E522FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D4ACD0792C85FACF00E522FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		D4ACD07B2C85FACF00E522FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D475CFA52CB83CB800D3503F /* Config.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WhoopMenuBar/WhoopMenuBar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"WhoopMenuBar/Preview Content\"";
+				DEVELOPMENT_TEAM = 878JX49Z63;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhoopMenuBar/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sf-dev.WhoopMenuBar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D4ACD07C2C85FACF00E522FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D475CFA52CB83CB800D3503F /* Config.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WhoopMenuBar/WhoopMenuBar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"WhoopMenuBar/Preview Content\"";
+				DEVELOPMENT_TEAM = 878JX49Z63;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhoopMenuBar/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sf-dev.WhoopMenuBar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D4ACD07E2C85FACF00E522FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 878JX49Z63;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sf-dev.WhoopMenuBarTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhoopMenuBar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WhoopMenuBar";
+			};
+			name = Debug;
+		};
+		D4ACD07F2C85FACF00E522FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 878JX49Z63;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sf-dev.WhoopMenuBarTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhoopMenuBar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WhoopMenuBar";
+			};
+			name = Release;
+		};
+		D4ACD0812C85FACF00E522FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 878JX49Z63;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sf-dev.WhoopMenuBarUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = WhoopMenuBar;
+			};
+			name = Debug;
+		};
+		D4ACD0822C85FACF00E522FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 878JX49Z63;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sf-dev.WhoopMenuBarUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = WhoopMenuBar;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4ACD0502C85FACC00E522FB /* Build configuration list for PBXProject "WhoopMenuBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4ACD0782C85FACF00E522FB /* Debug */,
+				D4ACD0792C85FACF00E522FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4ACD07A2C85FACF00E522FB /* Build configuration list for PBXNativeTarget "WhoopMenuBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4ACD07B2C85FACF00E522FB /* Debug */,
+				D4ACD07C2C85FACF00E522FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4ACD07D2C85FACF00E522FB /* Build configuration list for PBXNativeTarget "WhoopMenuBarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4ACD07E2C85FACF00E522FB /* Debug */,
+				D4ACD07F2C85FACF00E522FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4ACD0802C85FACF00E522FB /* Build configuration list for PBXNativeTarget "WhoopMenuBarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4ACD0812C85FACF00E522FB /* Debug */,
+				D4ACD0822C85FACF00E522FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4ACD04D2C85FACC00E522FB /* Project object */;
+}
