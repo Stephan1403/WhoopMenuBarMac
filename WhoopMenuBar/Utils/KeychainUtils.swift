@@ -8,7 +8,6 @@
 import Foundation
 import Security
 
-// TODO: create tokenManager
 class KeychainHelper {
     static let shared = KeychainHelper()
     private init() {}
