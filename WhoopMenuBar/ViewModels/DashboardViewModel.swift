@@ -14,19 +14,40 @@ class DashboardViewModel: ObservableObject {
     
     @Published var recoveryColor: Color = .clear
     
+    @Published var apiError: String? = nil
+    @Published var lastUpdate: Date? {
+        didSet {
+            UserDefaults.standard.set(lastUpdate, forKey: "lastUpdate")
+        }
+    }
+    
     private var authService: AuthService
     private var whoopApi: WhoopApi
+    
     
     init(authService: AuthService) {
         self.authService = authService
         self.whoopApi = WhoopApi(authService: authService)
+        
+        if let savedLastUpdate = UserDefaults.standard.object(forKey: "lastUpdate") as? Date {
+            self.lastUpdate = savedLastUpdate
+        } else {
+            let newData = Date()
+            UserDefaults.standard.set(newData, forKey: "lastUpdate")
+            lastUpdate = newData
+        }
     }
     
     
     func refreshAll() {
-        // Reset data
-        recoveryData = nil
+        recoveryData = nil // TODO: remove these and add loading animation instead
         sleepData = nil
+        
+
+        // Reset color
+        if self.recoveryData == nil {
+            self.recoveryColor = .clear
+        }
         
         // Load data
         self.getRecoveryData()
@@ -48,8 +69,18 @@ class DashboardViewModel: ObservableObject {
                         self.setRecoveryColor()
                     }
                 }
+                Task {
+                    DispatchQueue.main.async {
+                        self.apiError = nil
+                        self.lastUpdate = Date()
+                    }
+                }
                 return
             case .failure(let error):
+                // TODO: store correct error
+                Task {
+                    DispatchQueue.main.async { self.apiError = error.localizedDescription}
+                }
                 print("Unable to retrieve recovery data: \(error.localizedDescription)")
             }
         }
@@ -65,12 +96,21 @@ class DashboardViewModel: ObservableObject {
                         self.sleepData = data
                     }
                 }
+                Task {
+                    DispatchQueue.main.async {
+                        self.apiError = nil
+                        self.lastUpdate = Date()
+                    }
+                }
                 return
             case .failure(let error):
                 /* TODO: check if data is up-to-date
                  // TODO: show Info button
                  if not add retry button
                  */
+                Task {
+                    DispatchQueue.main.async { self.apiError = error.localizedDescription}
+                }
                 print("Unable to retrieve sleep data: \(error.localizedDescription)")
             }
         }
