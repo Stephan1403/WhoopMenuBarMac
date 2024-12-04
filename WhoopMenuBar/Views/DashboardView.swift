@@ -13,22 +13,13 @@ struct DashboardView: View {
     @StateObject private var viewModel: DashboardViewModel
     @State private var networkMonitor = NetworkMonitor()
     
-    // TODO: set global error
-    
     @State private var showingInfo: Bool = false
     @State private var showingError: Bool = false
 
     init(authService: AuthService) {
         _viewModel = StateObject(wrappedValue: DashboardViewModel(authService: authService))
     }
-    
-   /*
-    @State private var connectedAndDataAvailable: Bool {
-        print("Data loaded: \(viewModel.allDataLoaded())")
-        print("Network connected: \(networkMonitor.isConnected)")
-        return viewModel.allDataLoaded() || networkMonitor.isConnected
-    }
-    */
+  
 
     var body: some View {
         VStack {
@@ -36,14 +27,38 @@ struct DashboardView: View {
             
             Divider()
             
-            if(false) {
-                Text("Missing Internet")
+            if(viewModel.apiError != nil && !viewModel.allDataLoaded()) {
+                Text("Error")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .foregroundStyle(.red)
+                    .padding(.bottom, 5)
+                
+                Text("Unable to load data. Check internet connection and try again. Otherwise logout and login again.") // TODO: add dynamic message
+                    .font(.caption)
+                    .multilineTextAlignment(.center)  // Optional for alignment
+                    .lineLimit(nil)
+                    .frame(width: 300)
+                    
+                Button(action: {
+                    viewModel.refreshAll()
+                }, label: {
+                    HStack {
+                        Text("Reload data")
+                        Image(systemName: "arrow.clockwise")
+                            .resizable()
+                            .frame(width: 10, height: 12, alignment: .center)
+                    }
+                })
+                .padding()
+                        
+                
             } else {
                 RecoverySectionView(viewModel: viewModel)
                     .padding()
-                
+                    
                 Divider()
-                
+                    
                 SleepSectionView(viewModel: viewModel)
                     .padding()
             }

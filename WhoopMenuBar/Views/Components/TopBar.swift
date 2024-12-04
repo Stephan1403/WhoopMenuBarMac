@@ -11,24 +11,27 @@ struct TopBar: View {
     @ObservedObject var viewModel: DashboardViewModel
 
     @State private var showingInfo: Bool = false
-    @State private var showingError: Bool = false
+    @State private var showingSettings: Bool = false
+    @State private var logoutError: Bool = false
+    
+    @State private var mayOutdated: Bool = false
 
     var body: some View {
         HStack {
             Button( action: {
                 showingInfo.toggle()
             }) {
-                if(false) {
-                    Image(systemName: "info.circle")
-                        .resizable()
-                        .foregroundStyle(.red)
-                        .frame(width: 15, height: 15, alignment: .center)
-                } else {
+                if (viewModel.isUpToDate) {
                     Image(systemName: "checkmark.arrow.trianglehead.counterclockwise")
                         .resizable()
                         .foregroundStyle(.green)
                         .frame(width: 15, height: 17, alignment: .center)
                         .padding(.bottom, 2.5)
+                } else {
+                    Image(systemName: "info.circle")
+                        .resizable()
+                        .foregroundStyle(.red)
+                        .frame(width: 15, height: 15, alignment: .center)
                 }
                 
             }
@@ -36,27 +39,13 @@ struct TopBar: View {
             .frame(width: 50)
             /// Popover
             .popover(isPresented: $showingInfo) {
-                // TODO: fix logic and style
-                VStack(alignment: .leading, spacing: 10) {
-                    HStack {
-                        Text("Data may not be up to date.")
-                            .font(.headline)
-                        Spacer()
-                        Button(action: {
-                            print("Refresh")
-                        }) {
-                            Image(systemName: "arrow.clockwise")
-                                .padding(2)
-                                .font(.body)
-                        }
-                    }
-                    Text("Please note that the data you are viewing may not be the most recent. Refresh the data to ensure it's current.")
-                        .font(.body)
-                        .foregroundColor(.gray)
-                        .padding(.top, 5)
+                
+                // Check if update less than four hours ago
+                if (viewModel.isUpToDate) {
+                    UpToDatePopUp(viewModel: viewModel)
+                } else {
+                    OutdatedPopUp(viewModel: viewModel)
                 }
-                .padding()
-                .frame(width: 250)
             }
             
             
@@ -67,6 +56,9 @@ struct TopBar: View {
                 .padding(.vertical, 10)
                 .frame(maxWidth: .infinity, alignment: .center) // Center-align the title
             Spacer()
+            
+            /// Settings
+            
             Menu {
                 // Reload data
                 Button("Reload data") {
@@ -78,12 +70,12 @@ struct TopBar: View {
                     do {
                         try viewModel.logout()
                     } catch {
-                        showingError = true
+                        logoutError = true
                     }
                 }
-                .alert("Unable to logout", isPresented: $showingError) {
+                .alert("Unable to logout", isPresented: $logoutError) {
                      Button("OK", role: .cancel) {
-                         showingError = false
+                         logoutError = false
                      }
                 }
                 
@@ -93,11 +85,7 @@ struct TopBar: View {
                 }
                 .foregroundStyle(.red)
             } label: {
-                
-                Image(systemName: "gearshape")
-                    .resizable()
-                    .frame(width: 12, height: 12)
-                    .padding(.top, 10)
+                Image(systemName: "gear")
             }
             .frame(width: 50)
             .padding(.trailing, 4)

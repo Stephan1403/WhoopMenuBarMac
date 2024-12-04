@@ -10,6 +10,8 @@
 		D426BB782CF4ECAE0038AEED /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D426BB772CF4ECAE0038AEED /* TopBar.swift */; };
 		D426BB7A2CF500970038AEED /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D426BB792CF500970038AEED /* NetworkUtils.swift */; };
 		D48B2D862CA449EE0053733E /* RecoverySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48B2D852CA449EE0053733E /* RecoverySectionView.swift */; };
+		D4ABEBB82CFF92E60034829F /* OutdatedPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ABEBB72CFF92E60034829F /* OutdatedPopUp.swift */; };
+		D4ABEBBA2CFF99BB0034829F /* UpToDatePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ABEBB92CFF99BB0034829F /* UpToDatePopUp.swift */; };
 		D4ACD0592C85FACC00E522FB /* WhoopMenuBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD0582C85FACC00E522FB /* WhoopMenuBarApp.swift */; };
 		D4ACD05D2C85FACF00E522FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4ACD05C2C85FACF00E522FB /* Assets.xcassets */; };
 		D4ACD0602C85FACF00E522FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4ACD05F2C85FACF00E522FB /* Preview Assets.xcassets */; };
@@ -60,6 +62,8 @@
 		D426BB792CF500970038AEED /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		D475CFA52CB83CB800D3503F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		D48B2D852CA449EE0053733E /* RecoverySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverySectionView.swift; sourceTree = "<group>"; };
+		D4ABEBB72CFF92E60034829F /* OutdatedPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutdatedPopUp.swift; sourceTree = "<group>"; };
+		D4ABEBB92CFF99BB0034829F /* UpToDatePopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpToDatePopUp.swift; sourceTree = "<group>"; };
 		D4ACD0552C85FACC00E522FB /* WhoopMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoopMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4ACD0582C85FACC00E522FB /* WhoopMenuBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoopMenuBarApp.swift; sourceTree = "<group>"; };
 		D4ACD05C2C85FACF00E522FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -257,6 +261,8 @@
 			children = (
 				D4C0C9122CAF35FA003710E5 /* DataElement.swift */,
 				D426BB772CF4ECAE0038AEED /* TopBar.swift */,
+				D4ABEBB72CFF92E60034829F /* OutdatedPopUp.swift */,
+				D4ABEBB92CFF99BB0034829F /* UpToDatePopUp.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -414,10 +420,12 @@
 				D4F11C812C8E2D8C00933185 /* RecoveryData.swift in Sources */,
 				D4ACD0992C877F6F00E522FB /* DashboardViewModel.swift in Sources */,
 				D4ACD0972C87791900E522FB /* SleepData.swift in Sources */,
+				D4ABEBB82CFF92E60034829F /* OutdatedPopUp.swift in Sources */,
 				D4F11C7F2C8DF96500933185 /* KeychainUtils.swift in Sources */,
 				D4ACD09D2C8780D100E522FB /* WhoopApi.swift in Sources */,
 				D4ACD08E2C8763A600E522FB /* ContentView.swift in Sources */,
 				D4C0C9172CAF3F27003710E5 /* RecoveryChart.swift in Sources */,
+				D4ABEBBA2CFF99BB0034829F /* UpToDatePopUp.swift in Sources */,
 				D4C0C9102CAEEF02003710E5 /* SleepDataView.swift in Sources */,
 				D4ACD09B2C87808800E522FB /* AuthService.swift in Sources */,
 				D4F11C832C8F5D0700933185 /* TokenManager.swift in Sources */,

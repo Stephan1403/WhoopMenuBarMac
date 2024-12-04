@@ -20,6 +20,8 @@ class DashboardViewModel: ObservableObject {
             UserDefaults.standard.set(lastUpdate, forKey: "lastUpdate")
         }
     }
+    @Published var isUpToDate: Bool = false // This checks if the data is older than a set time
+    
     
     private var authService: AuthService
     private var whoopApi: WhoopApi
@@ -32,17 +34,32 @@ class DashboardViewModel: ObservableObject {
         if let savedLastUpdate = UserDefaults.standard.object(forKey: "lastUpdate") as? Date {
             self.lastUpdate = savedLastUpdate
         } else {
-            let newData = Date()
-            UserDefaults.standard.set(newData, forKey: "lastUpdate")
-            lastUpdate = newData
+            let now = Date()
+            UserDefaults.standard.set(now, forKey: "lastUpdate")
+            lastUpdate = now
+        }
+        
+    }
+    
+    func updateLastUpdate() {
+        Task {
+            DispatchQueue.main.async { self.lastUpdate = Date() }
+
+            // Check if data is up to date
+            let fourHoursAgo = Calendar.current.date(byAdding: .hour, value: -4, to: Date())!   // TODO: update condition (make dependent on cycles??)
+            if let time = self.lastUpdate, time > fourHoursAgo, self.apiError == nil {
+                DispatchQueue.main.async { self.isUpToDate = true }
+            } else {
+                DispatchQueue.main.async { self.isUpToDate = false }
+            }
         }
     }
     
     
+    /// API Interaction
     func refreshAll() {
         recoveryData = nil // TODO: remove these and add loading animation instead
         sleepData = nil
-        
 
         // Reset color
         if self.recoveryData == nil {
@@ -54,6 +71,7 @@ class DashboardViewModel: ObservableObject {
         self.getSleepData()
     }
     
+    
     func allDataLoaded() -> Bool {
         recoveryData != nil && sleepData != nil
     }
@@ -61,27 +79,22 @@ class DashboardViewModel: ObservableObject {
     
     func getRecoveryData() {
         whoopApi.fetchRecoveryData { result in
-            switch (result) {
-            case .success(let data):
-                Task {
+            Task {
+                switch (result) {
+                case .success(let data):
                     DispatchQueue.main.async {
                         self.recoveryData = data
                         self.setRecoveryColor()
-                    }
-                }
-                Task {
-                    DispatchQueue.main.async {
                         self.apiError = nil
-                        self.lastUpdate = Date()
                     }
-                }
-                return
-            case .failure(let error):
-                // TODO: store correct error
-                Task {
+                    break
+                case .failure(let error):
+                    // TODO: store correct error
                     DispatchQueue.main.async { self.apiError = error.localizedDescription}
+                    print("Unable to retrieve recovery data: \(error.localizedDescription)")
+                    break
                 }
-                print("Unable to retrieve recovery data: \(error.localizedDescription)")
+                DispatchQueue.main.async { self.updateLastUpdate() }
             }
         }
     }
@@ -89,40 +102,43 @@ class DashboardViewModel: ObservableObject {
     
     func getSleepData() {
         whoopApi.fetchSleepData { result in
-            switch (result) {
-            case .success(let data):
-                Task {
+            Task {
+                switch (result) {
+                case .success(let data):
                     DispatchQueue.main.async {
                         self.sleepData = data
-                    }
-                }
-                Task {
-                    DispatchQueue.main.async {
                         self.apiError = nil
-                        self.lastUpdate = Date()
                     }
-                }
-                return
-            case .failure(let error):
-                /* TODO: check if data is up-to-date
-                 // TODO: show Info button
-                 if not add retry button
-                 */
-                Task {
+                    break
+                case .failure(let error):
+                    // TODO: store correct error
                     DispatchQueue.main.async { self.apiError = error.localizedDescription}
+                    print("Unable to retrieve sleep data: \(error.localizedDescription)")
+                    break
                 }
-                print("Unable to retrieve sleep data: \(error.localizedDescription)")
+                DispatchQueue.main.async { self.updateLastUpdate() }
             }
         }
     }
-
-    
-    
-    
     
     
     func logout() throws {
         try self.authService.invalidate()
+    }
+    
+    
+    /// Other methods
+    func getLastUpdateTime() -> String? {
+        guard let lastUpdate = self.lastUpdate else { return nil }
+        
+        // Today
+        if (Calendar.current.isDateInToday(lastUpdate)) {
+            return lastUpdate.formatted(.dateTime.hour().minute())
+        }
+        if (Calendar.current.isDateInYesterday(lastUpdate)) {
+            return "Yesterday at \(lastUpdate.formatted(.dateTime.hour().minute()))"
+        }
+        return lastUpdate.formatted()
     }
     
     
@@ -143,5 +159,7 @@ class DashboardViewModel: ObservableObject {
             self.recoveryColor = .clear
         }
     }
+    
+    
     
 }
